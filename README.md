@@ -29,4 +29,4 @@ We are aiming to create a predictive model which would be able to effectively fl
 | Decisions  | During the generation and evaluation, we will be prioritizing reducing the count of false negatives. This will determine our evaluation and model recommendation.  |
 | Dependencies  | I need to create new data features within my dataset. I will be using aggregated values such as average transaction amount. This will be highly dependent on what data I receive from the client. |
 
-[View Data Request](.Datasets/Data_Request.pdf)
+[View Data Request](Datasets/Data_Request.pdf)
