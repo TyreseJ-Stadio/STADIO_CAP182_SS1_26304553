@@ -34,12 +34,27 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_
 scaler = RobustScaler()
 
 #fit the scaler on the training data - only on "Amount" and "Time" columns
-x_train['Scaled_Amount'] = scaler.fit_transform(x_train['Amount'])
-x_test['Scaled_Amount'] = scaler.transform(x_test['Amount'])
+x_train['Scaled_Amount'] = scaler.fit_transform(x_train[['Amount']])
+x_test['Scaled_Amount'] = scaler.transform(x_test[['Amount']])
 
-x_train['Scaled_Time'] = scaler.fit_transform(x_train['Time'])
-x_test['Scaled_Time'] = scaler.transform(x_test['Time'])
+x_train['Scaled_Time'] = scaler.fit_transform(x_train[['Time']])
+x_test['Scaled_Time'] = scaler.transform(x_test[['Time']])
 
 #dropping the original "Amount" and "Time" columns from the training and testing sets
 x_train.drop(columns=['Amount', 'Time'], inplace=True)
 x_test.drop(columns=['Amount', 'Time'], inplace=True)
+
+#Applying SMOTE to handle class imbalance in the training set
+from imblearn.over_sampling import SMOTE
+
+smote = SMOTE(random_state=42)
+x_train_resampled, y_train_resampled = smote.fit_resample(x_train, y_train) 
+
+#check distribution of the target variable in the resampled training set
+print("----DISTRIBUTION OF TARGET VARIABLE BEFORE SMOTE----")
+print("Before SMOTE - counts of label '1' (Fraud):", (y_train == 1).sum())
+print("Before SMOTE - counts of label '0' (Legit):", (y_train == 0).sum())
+
+print("----DISTRIBUTION OF TARGET VARIABLE AFTER SMOTE----")
+print("After SMOTE - counts of label '1' (Fraud):", (y_train_resampled == 1).sum())
+print("After SMOTE - counts of label '0' (Legit):", (y_train_resampled == 0).sum())
