@@ -15,7 +15,7 @@ This script performs automated feature engineering on a credit card transaction 
 ## Engineered Features
 This script adds three new predictive features to the dataset:
 
-1. **`Amount_Tier` (Categorical)**
+1. **`Amount_Tier`**
    * **Description:** Bins the transaction `Amount` into three equal-sized quantiles (terciles).
    * **Values:** `0` (Low), `1` (Medium), and `2` (High).
    * **Note:** This transforms continuous monetary values into categorical risk tiers, which can help tree-based models capture non-linear relationships with transaction size.
