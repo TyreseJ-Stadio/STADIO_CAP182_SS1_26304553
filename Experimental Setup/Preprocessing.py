@@ -58,3 +58,10 @@ print("Before SMOTE - counts of label '0' (Legit):", (y_train == 0).sum())
 print("----DISTRIBUTION OF TARGET VARIABLE AFTER SMOTE----")
 print("After SMOTE - counts of label '1' (Fraud):", (y_train_resampled == 1).sum())
 print("After SMOTE - counts of label '0' (Legit):", (y_train_resampled == 0).sum())
+
+# Exporting the preprocessed training and testing sets to CSV files
+x_train_resampled.to_csv("../Datasets/x_train_final.csv", index=False)
+y_train_resampled.to_csv("../Datasets/y_train_final.csv", index=False)
+
+x_test.to_csv("../Datasets/x_test_final.csv", index=False)
+y_test.to_csv("../Datasets/y_test_final.csv", index=False)
