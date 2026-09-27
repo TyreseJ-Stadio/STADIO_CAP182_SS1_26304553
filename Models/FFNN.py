@@ -18,10 +18,39 @@ x_train, x_val, y_train, y_val = train_test_split(x_train_full, y_train_full, te
 
 # Defining the model architecture
 model = Sequential([
-    Dense(64, activation='relu', input_shape=(x_train.shape[1])),
+    Dense(64, activation='relu', input_shape=(int(x_train.shape[1]),)),
     Dropout(0.3),
     Dense(32, activation='relu'),
     Dropout(0.3),
     Dense(1, activation='sigmoid')
 ])
 
+# Compiling the model
+model.compile(optimizer='adam', 
+              loss='binary_crossentropy'
+              )
+model.summary()
+
+# Inclusion of Early Stopping
+early_stopping = EarlyStopping(
+    monitor='val_loss',
+    patience=5,
+    restore_best_weights=True
+)
+
+# Training the Model
+
+history = model.fit(
+    x_train, y_train,
+    validation_data=(x_val, y_val),
+    epochs=100,
+    batch_size=64,
+    callbacks=[early_stopping],
+    verbose=1
+)    
+
+print("----MODEL TRAINING COMPLETE----")
+
+# Saving the trained model
+model.save("../Models/FFNN_model.keras")
+print("----MODEL SAVED----")
