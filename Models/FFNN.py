@@ -16,5 +16,12 @@ y_train_full = pd.read_csv("../Datasets/y_train_final.csv")
 
 x_train, x_val, y_train, y_val = train_test_split(x_train_full, y_train_full, test_size=0.2, random_state=42, stratify=y_train_full)
 
-
+# Defining the model architecture
+model = Sequential([
+    Dense(64, activation='relu', input_shape=(x_train.shape[1])),
+    Dropout(0.3),
+    Dense(32, activation='relu'),
+    Dropout(0.3),
+    Dense(1, activation='sigmoid')
+])
 
