@@ -22,6 +22,7 @@ print(credit_card_data_f.isnull().sum())
 
 from sklearn.preprocessing import RobustScaler
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
 
 #Defining features and target variable
 x = credit_card_data_f.drop(columns=['Class'])
@@ -30,19 +31,14 @@ y = credit_card_data_f['Class']
 #splitting the dataset into training and testing sets
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42, stratify=y)
 
-#scaling the features using RobustScaler
-scaler = RobustScaler()
+# Scale all features at once
+scaler = StandardScaler()
+x_train_scaled = scaler.fit_transform(x_train)
+x_test_scaled = scaler.transform(x_test)
 
-#fit the scaler on the training data - only on "Amount" and "Time" columns
-x_train['Scaled_Amount'] = scaler.fit_transform(x_train[['Amount']])
-x_test['Scaled_Amount'] = scaler.transform(x_test[['Amount']])
-
-x_train['Scaled_Time'] = scaler.fit_transform(x_train[['Time']])
-x_test['Scaled_Time'] = scaler.transform(x_test[['Time']])
-
-#dropping the original "Amount" and "Time" columns from the training and testing sets
-x_train.drop(columns=['Amount', 'Time'], inplace=True)
-x_test.drop(columns=['Amount', 'Time'], inplace=True)
+# Converting the resulting NumPy arrays back to Pandas DataFrames to keep column names
+x_train = pd.DataFrame(x_train_scaled, columns=x_train.columns)
+x_test = pd.DataFrame(x_test_scaled, columns=x_test.columns)
 
 #Applying SMOTE to handle class imbalance in the training set
 from imblearn.over_sampling import SMOTE
