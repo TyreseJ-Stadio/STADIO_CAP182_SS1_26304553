@@ -2,30 +2,30 @@
 import pandas as pd
 
 # Read the CSV file into a DataFrame
-credit_card_data = pd.read_csv("Datasets/creditcard.csv")
+credit_card_data_f = pd.read_csv("../Datasets/feature_engineered_data.csv")
 
 #inspect the first few rows of the DataFrame
 print("----HEAD----")
-print(credit_card_data.head())
+print(credit_card_data_f.head())
 
 #inspect the summary statistics of the DataFrame
 print("----DESCRIBE----")
-print(credit_card_data.describe()) 
+print(credit_card_data_f.describe()) 
 
 #inspect the data types of the DataFrame
 print("----DTYPES----")
-print(credit_card_data.dtypes)
+print(credit_card_data_f.dtypes)
 
 #inspect for missing values in the DataFrame
 print("----MISSING VALUES----")
-print(credit_card_data.isnull().sum())
+print(credit_card_data_f.isnull().sum())
 
 from sklearn.preprocessing import RobustScaler
 from sklearn.model_selection import train_test_split
 
 #Defining features and target variable
-x = credit_card_data.drop(columns=['Class'])
-y = credit_card_data['Class']
+x = credit_card_data_f.drop(columns=['Class'])
+y = credit_card_data_f['Class']
 
 #splitting the dataset into training and testing sets
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42, stratify=y)
