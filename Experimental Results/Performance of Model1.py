@@ -50,8 +50,8 @@ sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', cbar=False,
 
 # Adding labels and title
 plt.title('Confusion Matrix - Model 1 (FFNN)', pad=15)
-plt.xlabel('Predicted Fraud', labelpad=10)
-plt.ylabel('True Fraud', labelpad=10)
+plt.xlabel('Predicted ', labelpad=10)
+plt.ylabel('Actual ', labelpad=10)
 
 # Saving the image to the Experimental Results folder
 plt.tight_layout()
