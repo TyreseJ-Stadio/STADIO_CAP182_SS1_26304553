@@ -3,7 +3,7 @@
 ## Overview
 This repository contains the implementation and training pipeline for **Model 1**, a Feedforward Neural Network (FFNN) built using TensorFlow/Keras. This model is designed for binary classification tasks, featuring automated validation set creation, data sanitization, early stopping, and performance tracking. 
 
-* Training & Inference File: ..Models/Model1.py
+* Training & Inference File: `..Models/Model1.py`
 * Inputs: `..Datasets/x_train_final.csv`, `..Datasets/y_train_final.csv`, `..Datasets/x_test_final.csv`, `..Datasets/y_test_final.csv`
 * Output: `..Models/FFNN_model.keras`
 
