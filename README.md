@@ -1,4 +1,6 @@
-# STADIO CAP182-SS1
+# STADIO CAP182
+
+## SS1
 
 # Part A - Motivation
 StadioEquities is a retail investment platform which allows consumers to invest into different stocks and equities with a lower barrier of entry than traditional stockbrokers. The business is suffering from multiple pain points. 
@@ -30,3 +32,6 @@ We are aiming to create a predictive model which would be able to effectively fl
 | Dependencies  | I need to create new data features within my dataset. I will be using aggregated values such as average transaction amount. This will be highly dependent on what data I receive from the client. |
 
 [View Data Request](Datasets/Data_Request.pdf)
+
+
+## SS2
