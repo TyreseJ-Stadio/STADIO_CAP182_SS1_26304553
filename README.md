@@ -39,13 +39,13 @@ See the following links to navigate for files pertaining to SS2 specifically.
 
 [View Part A](Assignment_PDFs/SS2_PartA_literature_review.pdf)  
 
-[View Part B - Feature Engineering](Experimental_Setup/FeatureEngineering/FeatureEngineering.MD)
-[View Part B - Preprocessing](Experimental_Setup/Preprocessing/Preprocessing.MD)
-[View Part B - Model 1](Models/Model1.MD)
+[View Part B - Feature Engineering](Experimental_Setup/FeatureEngineering/FeatureEngineering.MD)  
+[View Part B - Preprocessing](Experimental_Setup/Preprocessing/Preprocessing.MD)  
+[View Part B - Model 1](Models/Model1.MD)  
 [View Part B - Model 2](Models/Model2.MD)  
 
-[View Part C - Model 1 Performance](Experimental_Results/Model1Performance.MD)
-[View Part C - Model 2 Performance](Experimental_Results/Model2Performance.MD)
+[View Part C - Model 1 Performance](Experimental_Results/Model1Performance.MD)  
+[View Part C - Model 2 Performance](Experimental_Results/Model2Performance.MD)  
 [View Part C - Model Comparison](Experimental_Results/Comparison.MD)  
 
 [View Part D - SS2_PartD ](Assignment_PDFs/SS2_PartD.pdf)
