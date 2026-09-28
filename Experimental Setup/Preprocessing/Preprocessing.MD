@@ -14,10 +14,10 @@ This document outlines the data preparation pipeline used before training our ma
 
 * **Output:** Generates 4 new datasets which are:
 
-x_train_final - "../Datasets/x_train_final.csv"  
-y_train_final - "../Datasets/y_train_final.csv"  
-x_test_final - "../Datasets/x_test_final.csv"  
-y_test_final - "../Datasets/y_test_final.csv"  
+x_train_final - '../Datasets/x_train_final.csv'  
+y_train_final - '../Datasets/y_train_final.csv'  
+x_test_final - '../Datasets/x_test_final.csv'  
+y_test_final - '../Datasets/y_test_final.csv'  
 
 ## Preprocessing
 This script adds three new predictive features to the dataset:
