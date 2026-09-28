@@ -30,3 +30,6 @@ This script adds three new predictive features to the dataset:
 * **Class Imbalance Check:** The script outputs the count of Fraudulent (`Class = 1`) vs. Legitimate (`Class = 0`) transactions upon execution. This is a critical baseline check, as the credit card data is highly imbalanced.
 * **Temporal Sorting:** Before calculating the sliding window features, the dataset is explicitly sorted by the `Time` column to ensure chronological accuracy for the rolling calculations.
 * **Datetime Conversion:** The original `Time` column (measured in elapsed seconds) is temporarily mapped to a mock datetime index starting at `2026-01-01`. This allows the script to leverage the pandas native `rolling('1h')` frequency function. The temporary index is removed before saving the final CSV.
+
+## How to Run: 
+Ensure dependencies are installed (pip install -r requirements.txt), then execute the main script from the root directory: Experimental_Setup/Featureengineering/FeatureEngineering.py

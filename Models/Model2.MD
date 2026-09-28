@@ -11,3 +11,6 @@ Training pipeline for the optimized Random Forest Model
 3. **Model Configuration:** Sets up a `RandomForestClassifier` initialized with tuned hyperparameters (`n_estimators=300`, `max_depth=30`, `min_samples_split=2`, `min_samples_leaf=1`, `class_weight='balanced'`).
 4. **Training:** Fits the model using the best parameters previously determineed.
 5. **Saving:** Exports the trained model using `joblib`.
+
+## How to Run: 
+Ensure dependencies are installed (pip install -r requirements.txt), then execute the main script from the root directory: ..Models/Model2.py

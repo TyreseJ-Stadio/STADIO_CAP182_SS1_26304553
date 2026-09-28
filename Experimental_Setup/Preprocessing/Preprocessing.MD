@@ -1,7 +1,7 @@
 # Credit Card Fraud Dataset - Preprocessing 
 
 ## Overview
-Associated Script: “Experimental Setup/Preprocessing.py”
+Associated Script: `Experimental_Setup/Preprocessing/Preprocessing.py`
 
 This document outlines the data preparation pipeline used before training our machine learning models. Because fraud data is heavily imbalanced, a major focus of this stage is scaling the features and balancing the classes so our models do not simply predict "not fraud" constantly.
 
@@ -38,3 +38,5 @@ This script adds three new predictive features to the dataset:
 5. **Exporting the Data**
    * It saves the model-ready data into four separate CSV files, ready to be fed into the classification algorithms.
 
+## How to Run: 
+Ensure dependencies are installed (pip install -r requirements.txt), then execute the main script from the root directory: Experimental_Setup/Preprocessing/Preprocessing.py

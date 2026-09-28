@@ -13,3 +13,6 @@ This repository contains the implementation and training pipeline for **Model 1*
 3. **Architecture:** A Sequential neural network with two Dense layers (64 and 32 units, ReLU activation), Dropout regularization (`0.3`), and a Sigmoid output layer.  
 4. **Training:** Compiles using the Adam optimizer and binary crossentropy loss, utilizing **Early Stopping** (patience=5) to prevent overfitting.  
 5. **Saving:** Exports the trained model to the `Models/` directory.  
+
+## How to Run: 
+Ensure dependencies are installed (pip install -r requirements.txt), then execute the main script from the root directory: ..Models/Model1.py
