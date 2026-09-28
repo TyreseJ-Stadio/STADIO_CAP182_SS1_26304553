@@ -3,7 +3,7 @@
 Performance evaluation pipeline for the trained Feedforward Neural Network (FFNN).
 
 ## File Location
-* **Script:** `Experimental Results/Model1Performance.py`
+* **Script:** `Experimental_Results/Model1Performance.py`
 * **Input Artifacts:** `Models/FFNN_model.keras`, `Datasets/x_test_final.csv`, `Datasets/y_test_final.csv`
 * **Output Artifact:** `Experimental Results/Model1_Confusion_Matrix.png`
 
