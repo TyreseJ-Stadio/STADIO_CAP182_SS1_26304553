@@ -6,7 +6,7 @@ Associated Script: “Experimental Setup/Preprocessing.py”
 This document outlines the data preparation pipeline used before training our machine learning models. Because fraud data is heavily imbalanced, a major focus of this stage is scaling the features and balancing the classes so our models do not simply predict "not fraud" constantly.
 
 ## Dependencies
-- Python 3.x
+- `Python 3.x`
 - `pandas`
 
 ## Input and Output
@@ -14,11 +14,10 @@ This document outlines the data preparation pipeline used before training our ma
 
 * **Output:** Generates 4 new datasets which are:
 
-x_train_final - "../Datasets/x_train_final.csv"
-y_train_final - "../Datasets/y_train_final.csv"
-
-x_test_final - "../Datasets/x_test_final.csv"
-y_test_final - "../Datasets/y_test_final.csv"
+x_train_final - "../Datasets/x_train_final.csv"  
+y_train_final - "../Datasets/y_train_final.csv"  
+x_test_final - "../Datasets/x_test_final.csv"  
+y_test_final - "../Datasets/y_test_final.csv"  
 
 ## Preprocessing
 This script adds three new predictive features to the dataset:
