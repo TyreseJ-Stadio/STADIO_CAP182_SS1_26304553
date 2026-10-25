@@ -58,5 +58,5 @@ You can use the Scripts provided to generate features and process the data to re
 [View Part D - SS2_PartD ](Assignment_PDFs/SS2_PartD.pdf)
 
 ## SS3
-[View Part B - SS3 Part B](https://github.com/TyreseJ-Stadio/STADIO_CAP182_SS1_26304553/blob/main/Final_Model_Pipeline/SS3_PartB.ipynb)
+[View Part B - SS3 Part B](Final_Model_Pipeline/SS3_PartB.ipynb)  
 [View Part C - SS3 Part C](https://youtu.be/oIyZzt8PIwM)
